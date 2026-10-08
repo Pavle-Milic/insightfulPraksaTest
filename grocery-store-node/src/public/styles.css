@@ -1,0 +1,194 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #222;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page {
+  width: min(1100px, 92%);
+  margin: 30px auto;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.login-card {
+  max-width: 520px;
+  margin: 60px auto 20px;
+}
+
+#loginForm,
+.login-card label {
+  display: grid;
+  gap: 8px;
+}
+
+#loginForm {
+  gap: 14px;
+}
+
+.login-presets {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.login-presets p {
+  margin: 0 0 2px;
+  color: #555;
+}
+
+.login-presets button {
+  text-align: left;
+  padding: 9px 10px;
+}
+
+input, select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.app-header,
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.app-header {
+  margin-bottom: 20px;
+}
+
+.tree ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.tree > ul {
+  padding-left: 0;
+}
+
+.tree li {
+  margin: 5px 0;
+}
+
+.node-button {
+  border: 1px solid #bbb;
+  background: #eee;
+  border-radius: 5px;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+.node-button.accessible {
+  background: #dff3df;
+  border-color: #6bab6b;
+}
+
+.node-button.accessible:hover {
+  background: #cceacc;
+}
+
+.node-button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.node-type {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 6px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.action-cell {
+  width: 70px;
+  text-align: center;
+}
+
+.delete-button,
+.confirm-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: white;
+}
+
+.delete-button:hover,
+.confirm-button:hover {
+  background: #eee;
+}
+
+
+.error {
+  color: #a00;
+}
+
+.hint {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.log-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.log-columns > div {
+  min-width: 0;
+}
+
+pre {
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 20em;
+  overflow-y: auto;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 750px) {
+  .log-columns {
+    grid-template-columns: 1fr;
+  }
+}

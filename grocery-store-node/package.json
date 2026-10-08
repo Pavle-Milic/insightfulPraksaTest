@@ -1,0 +1,24 @@
+{
+  "name": "insightful-grocery-store",
+  "version": "1.0.0",
+  "description": "Insightful internship test - Node.js / Express / MongoDB backend with a simple web frontend",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seeder/seed.js",
+    "seed:reset": "node src/seeder/seed.js --reset",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.0",
+    "zod": "^3.23.8"
+  }
+}

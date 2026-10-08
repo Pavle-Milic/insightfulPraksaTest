@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insightful Grocery Store</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section id="loginView" class="card login-card">
+        <h1>Insightful Grocery Store</h1>
+        <h2>Login</h2>
+
+        <div class="login-presets">
+          <p>Brzi izbor naloga:</p>
+          <button type="button" data-login-user="srbija.manager1" data-login-password="password123">
+            Manager — Srbija (root)
+          </button>
+          <button type="button" data-login-user="srbija.employee1" data-login-password="password123">
+            Employee — Srbija (root)
+          </button>
+          <button type="button" data-login-user="novisad.manager1" data-login-password="password123">
+            Manager — Novi Sad (sredina)
+          </button>
+          <button type="button" data-login-user="radnja1.employee1" data-login-password="password123">
+            Employee — Radnja 1 (list)
+          </button>
+        </div>
+
+        <form id="loginForm">
+          <label>
+            Username
+            <input id="loginUsername" name="username" autocomplete="username" required />
+          </label>
+          <label>
+            Password
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit">Login</button>
+        </form>
+        <p class="hint">Svi seedovani nalozi koriste password <code>password123</code>.</p>
+        <p id="loginError" class="error" hidden></p>
+      </section>
+
+      <section id="appView" hidden>
+        <header class="app-header">
+          <div>
+            <h1>Insightful Grocery Store</h1>
+            <p id="currentUser"></p>
+          </div>
+          <button id="logoutButton" type="button">Logout</button>
+        </header>
+
+        <section id="treeView" class="card">
+          <div class="section-header">
+            <div>
+              <h2>Organization tree</h2>
+            </div>
+          </div>
+          <div id="treeContainer" class="tree"></div>
+          <p id="treeError" class="error" hidden></p>
+        </section>
+
+        <section id="employeeView" class="card" hidden>
+          <div class="section-header">
+            <div>
+              <button id="backToTreeButton" type="button">← Tree</button>
+              <h2 id="employeeTitle">Employees</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Username</th>
+                  <th>Node</th>
+                  <th id="actionHeader">Action</th>
+                </tr>
+              </thead>
+              <tbody id="employeeTableBody"></tbody>
+            </table>
+          </div>
+                    <p id="employeeError" class="error" hidden></p>
+        </section>
+      </section>
+
+      <section id="restLog" class="card log-card">
+        <div class="section-header">
+          <div>
+            <h2>REST log</h2>
+            <p>Poslednjih nekoliko REST poziva i odgovora.</p>
+          </div>
+        </div>
+        <div class="log-columns">
+          <div>
+            <h3>Request</h3>
+            <pre id="requestLog">Nema poziva.</pre>
+          </div>
+          <div>
+            <h3>Response</h3>
+            <pre id="responseLog">Nema odgovora.</pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
